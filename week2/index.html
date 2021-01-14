@@ -14,6 +14,22 @@
 
     <script>
       // JavaScript
+
+      // 要素を取得する
+      //
+      // 直接的に要素を取得する
+      //
+      // idをもとに要素を ひとつだけ 取得する。
+      const card1 = document.getElementById("primary-card");
+      console.log(card1);
+      //
+      // CSSのセレクタに合致する要素を ひとつだけ 取得する。
+      const card2 = document.querySelector(".card");
+      console.log(card2);
+      //
+      // CSSのセレクタに合致する要素を すべて 取得する。
+      const cards = document.querySelectorAll(".card");
+      console.log(cards);
     </script>
   </body>
 </html>

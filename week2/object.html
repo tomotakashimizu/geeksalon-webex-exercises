@@ -25,6 +25,12 @@
         // コンソールにdisplayの正体を表示
         console.dir(display);
       };
+
+      // 画面の読み込みが終了したときに window オブジェクトで発生するイベントである
+      // load イベントのイベントオブジェクト
+      window.onload = function (e) {
+        console.dir(e);
+      };
     </script>
   </body>
 </html>

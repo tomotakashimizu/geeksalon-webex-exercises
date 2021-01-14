@@ -11,17 +11,15 @@
     <button id="button">クリック！</button>
 
     <script>
+      // カウントアプリ
       const display = document.getElementById("display");
       const button = document.getElementById("button");
-      // button.onclick = function () {
-      //   display.textContent = "クリックされた！！";
-      // };
-
-      // カウントアプリ
       let count = 0;
+
       button.onclick = function () {
         count += 1;
         display.textContent = count;
+        console.dir(display);
       };
     </script>
   </body>

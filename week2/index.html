@@ -39,6 +39,12 @@
       //
       // cardsContainerの最初の（0番目の）子要素を取得
       const primaryCard = cardsContainer.children[0];
+
+      // 要素を変更する
+      //
+      // #primary-card の要素を取得したあと、なかみを こんばんは に変更
+      const card = document.getElementById("primary-card");
+      card.textContent = "こんばんは";
     </script>
   </body>
 </html>

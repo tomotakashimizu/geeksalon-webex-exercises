@@ -45,6 +45,9 @@
       // #primary-card の要素を取得したあと、なかみを こんばんは に変更
       const card = document.getElementById("primary-card");
       card.textContent = "こんばんは";
+      // 次のように、HTML として解釈可能な文字列がわたされた場合
+      // textContent は文字列を HTML として解釈しません。
+      card.textContent = '<span style="font-weight:bold">こんばんは</span>';
     </script>
   </body>
 </html>

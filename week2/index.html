@@ -40,7 +40,7 @@
       // cardsContainerの最初の（0番目の）子要素を取得
       const primaryCard = cardsContainer.children[0];
 
-      // 要素を変更する
+      // 要素を変更する（textContent）
       //
       // #primary-card の要素を取得したあと、なかみを こんばんは に変更
       const card = document.getElementById("primary-card");
@@ -55,6 +55,15 @@
       // innerHTML のように、文字列を HTML として解釈して何かをする機能はほかにもありますが、これらには XSS （クロスサイトスクリプティング）という攻撃の脆弱性があります。
       // XSS とは、ウェブページ上で勝手に任意の JavaScript を実行させる攻撃です。
       // 詳しくは説明しませんが、 innerHTML のような機能をつかうときには注意が必要とだけ覚えていてください。
+
+      // 要素を変更する（className）
+      //
+      // JavaScript から要素の class 属性を変更
+      const cardClass = document.querySelector(".card");
+      // 一つのクラスを追加
+      cardClass.className = "nice-card";
+      // 複数のクラスを追加 空白で区切る
+      cardClass.className = "nice-card great-card";
     </script>
   </body>
 </html>

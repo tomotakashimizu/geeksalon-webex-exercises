@@ -52,6 +52,9 @@
       //
       // textContent と似ていながら、文字列を HTML として解釈する innerHTML もある
       card.innerHTML = '<span style="font-weight:bold">こんばんは</span>';
+      // innerHTML のように、文字列を HTML として解釈して何かをする機能はほかにもありますが、これらには XSS （クロスサイトスクリプティング）という攻撃の脆弱性があります。
+      // XSS とは、ウェブページ上で勝手に任意の JavaScript を実行させる攻撃です。
+      // 詳しくは説明しませんが、 innerHTML のような機能をつかうときには注意が必要とだけ覚えていてください。
     </script>
   </body>
 </html>

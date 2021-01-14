@@ -15,8 +15,6 @@
     <script>
       // JavaScript
 
-      // 要素を取得する
-      //
       // 直接的に要素を取得する
       //
       // idをもとに要素を ひとつだけ 取得する。
@@ -30,6 +28,17 @@
       // CSSのセレクタに合致する要素を すべて 取得する。
       const cards = document.querySelectorAll(".card");
       console.log(cards);
+
+      // 相対的に要素を取得する
+      //
+      // 親要素を取得
+      const cardsContainer = document.getElementById("cards-container");
+      //
+      // cardsContainerの子要素をすべて取得
+      const cards = cardsContainer.children;
+      //
+      // cardsContainerの最初の（0番目の）子要素を取得
+      const primaryCard = cardsContainer.children[0];
     </script>
   </body>
 </html>

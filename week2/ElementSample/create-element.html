@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ElementSample-5（Week2-JavaScriptで要素を操作する）</title>
+  </head>
+  <body>
+    <div id="cards-container">
+      <div class="card" id="primary-card">こんにちは</div>
+      <div class="card">こんばんは</div>
+    </div>
+
+    <script>
+      // JavaScript
+
+      // 要素を作成する
+      //
+      // document.createElement
+      // document.createElement を使うと、まっさらな要素を作ることができます。
+      // このまっさらな要素に、あとから textContent で中身を書き加えたり、
+      // classList にクラスを追加したりして、自分のほしい要素を作成します。
+      const card = document.createElement("div"); // タグ名を指定する
+      card.className = "card";
+      card.textContent = "こんばんは";
+      // document.createElement で作成した要素は、当然まだ DOM ツリーの中には存在しないので、
+      // 自分で DOM ツリーに追加してあげる必要があります。
+      // すぐ次に説明します。
+    </script>
+  </body>
+</html>

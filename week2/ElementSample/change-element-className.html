@@ -23,9 +23,15 @@
       card.className = "nice-card";
       // 複数のクラスを追加 空白で区切る
       card.className = "nice-card great-card";
+      // nice-card というクラスに対して CSS を書いていれば、JavaScript から要素の見た目を切り替えることができます。
+      // ただし、 className は、既存の class 属性を上書きしてしまいます。
+      // これを避けるためには、いままでの className に空白つきで新しいクラスの文字列をつなげます。
 
       // 既存のクラスに追加
       card.className = card.className + " nice-card";
+      // なんだか気持ちの悪い書き方ではありませんか？
+      // 僕はただ nice-card クラスを追加したいだけなのに、こんな複雑なことを……。
+      // そんなときに classList を使います。
     </script>
   </body>
 </html>

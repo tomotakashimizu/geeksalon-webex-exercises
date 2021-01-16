@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ElementSample-2（Week2-JavaScriptで要素を操作する）</title>
+  </head>
+  <body>
+    <div id="cards-container">
+      <div class="card" id="primary-card">こんにちは</div>
+      <div class="card">こんばんは</div>
+    </div>
+
+    <script>
+      // JavaScript
+
+      // 要素を変更する（textContent）
+      //
+      // #primary-card の要素を取得したあと、なかみを こんばんは に変更
+      const card = document.getElementById("primary-card");
+      card.textContent = "こんばんは";
+      //
+      // 次のように、HTML として解釈可能な文字列がわたされた場合
+      // textContent は文字列を HTML として解釈しません。
+      card.textContent = '<span style="font-weight:bold">こんばんは</span>';
+      //
+      // textContent と似ていながら、文字列を HTML として解釈する innerHTML もある
+      card.innerHTML = '<span style="font-weight:bold">こんばんは</span>';
+      // innerHTML のように、文字列を HTML として解釈して何かをする機能はほかにもありますが、これらには XSS （クロスサイトスクリプティング）という攻撃の脆弱性があります。
+      // XSS とは、ウェブページ上で勝手に任意の JavaScript を実行させる攻撃です。
+      // 詳しくは説明しませんが、 innerHTML のような機能をつかうときには注意が必要とだけ覚えていてください。
+    </script>
+  </body>
+</html>

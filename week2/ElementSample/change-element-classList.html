@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ElementSample-4（Week2-JavaScriptで要素を操作する）</title>
+  </head>
+  <body>
+    <div id="cards-container">
+      <div class="card" id="primary-card">こんにちは</div>
+      <div class="card">こんばんは</div>
+    </div>
+
+    <script>
+      // JavaScript
+
+      // 要素を変更する（classList）
+      //
+      // JavaScript から要素の class 属性を変更
+      // className は複雑な class 属性の操作をするのには向いていませんでした。
+      // classList におまかせください！
+      const card = document.querySelector(".card");
+      // クラスに追加
+      card.classList.add("nice-card");
+      // クラスを削除
+      card.classList.remove("nice-card");
+      // 対象の要素が今どんなクラスを持っているかは関係ありません。
+      // 僕は nice-card を追加する（ add ）、または削除する（ remove ）とだけ書けばよいのです。
+      // classList はとても便利なので、ぜひ覚えてください。
+    </script>
+  </body>
+</html>

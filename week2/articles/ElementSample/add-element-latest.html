@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ElementSample-9（Week2-JavaScriptで要素を操作する）</title>
+  </head>
+  <body>
+    <!-- 追加前 -->
+    <!-- ① beforebegin -->
+    <div id="cards-container">
+      <!-- ② afterbegin -->
+      <div class="card">こんにちは</div>
+      <!-- ③ beforeend -->
+    </div>
+    <!-- ④ afterend -->
+
+    <!-- 追加後 -->
+    <!-- <div id="cards-container">
+      <div class="card">おはよう</div>
+      <div class="card">こんにちは</div>
+    </div> -->
+
+    <script>
+      // JavaScript
+
+      // 要素を追加する
+      //
+      // 追加先の要素を取得
+      const cardsContainer = document.getElementById("cards-container");
+
+      // 追加するdiv要素を作成
+      const card = document.createElement("div");
+      card.textContent = "おはよう";
+      card.className = "card";
+
+      cardsContainer.prepend(card);
+    </script>
+  </body>
+</html>

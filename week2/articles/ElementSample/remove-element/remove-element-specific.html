@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ElementSample-10（Week2-JavaScriptで要素を操作する）</title>
+  </head>
+  <body>
+    <!-- 追加前 -->
+    <div id="cards-container">
+      <div class="card">こんにちは</div>
+      <div class="card">こんばんは</div>
+    </div>
+
+    <!-- 追加後 -->
+    <!-- <div id="cards-container">
+      <div class="card">おはよう</div>
+      <div class="card">こんにちは</div>
+    </div> -->
+
+    <script>
+      // JavaScript
+
+      // 要素を追加する
+      //
+      // 削除先の親要素を取得
+      const cardsContainer = document.getElementById("cards-container");
+
+      // 削除したい要素を取得
+      const card = cardsContainer.children[1]; // childrenを使うと子要素を配列（のようなもの）として取得できる
+
+      // cardsContainerから子要素を削除
+      cardsContainer.removeChild(card);
+    </script>
+  </body>
+</html>

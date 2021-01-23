@@ -26,3 +26,8 @@ inputDate.oninput = logValue;
 // イベントに紐付けられた関数を特にイベントハンドラ（event handler）という。
 // イベントハンドラは、引数にイベントオブジェクトを受け取ることができる。
 // input 要素への入力は、引数で e を受け取って e.target.value で使える。
+
+// キーボードを押すたびに、押したキーの名前（ a 、 b 、 Enter など）をコンソールに出力するようにしてください。
+document.onkeydown = function (e) {
+  console.log(e.key);
+};

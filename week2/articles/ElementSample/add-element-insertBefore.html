@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ElementSample-8（Week2-JavaScriptで要素を操作する）</title>
+  </head>
+  <body>
+    <!-- 追加前 -->
+    <div id="cards-container">
+      <div>1</div>
+      <div id="three">3</div>
+      <div>4</div>
+    </div>
+
+    <!-- 追加後 -->
+    <!-- <div id="cards-container">
+      <div>1</div>
+      <div>2</div>
+      <div id="three">3</div>
+      <div>4</div>
+    </div> -->
+
+    <script>
+      // JavaScript
+
+      // 要素を追加する
+      //
+      // 追加先の親要素を取得
+      const numbersContainer = document.getElementById("numbers-container");
+      // 追加先の直後の要素を取得
+      const three = document.getElementById("three");
+
+      // 追加する要素を作成
+      const two = document.createElement("div");
+      card.textContent = " 2 ";
+
+      numbersContainer.insertBefore(two, three);
+    </script>
+  </body>
+</html>
